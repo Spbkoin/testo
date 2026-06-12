@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Дмитрий Захаров | VR-разработчик</title>
+  <title>Дмитрий Захаров | VR-разработчик и 3D-художник</title>
   <!-- Google Fonts & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -34,7 +34,6 @@
       opacity: 0.7;
     }
 
-    /* основной контент поверх фона */
     .content {
       position: relative;
       z-index: 2;
@@ -43,7 +42,6 @@
       padding: 2rem 1.5rem 3rem;
     }
 
-    /* стеклянные карточки / глосс-эффект */
     .glass-card {
       background: rgba(15, 20, 40, 0.55);
       backdrop-filter: blur(12px);
@@ -58,16 +56,6 @@
       box-shadow: 0 20px 40px rgba(0, 180, 255, 0.2);
     }
 
-    /* Неоновые акценты */
-    .neon-text {
-      text-shadow: 0 0 5px #00ccff, 0 0 10px #0066ff;
-    }
-
-    .neon-border {
-      box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
-    }
-
-    /* Кнопки */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -98,7 +86,6 @@
       box-shadow: 0 8px 20px rgba(0, 200, 255, 0.4);
     }
 
-    /* секции */
     section {
       margin: 6rem 0;
     }
@@ -116,7 +103,6 @@
       padding-left: 1.2rem;
     }
 
-    /* hero area */
     .hero {
       display: flex;
       flex-wrap: wrap;
@@ -130,17 +116,22 @@
       flex: 1;
     }
 
+    .badge-group {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
     .badge {
       background: rgba(0, 255, 255, 0.15);
       backdrop-filter: blur(5px);
       padding: 0.3rem 1rem;
       border-radius: 2rem;
-      display: inline-block;
       font-size: 0.8rem;
       font-weight: 500;
       letter-spacing: 1px;
       border: 1px solid #0cf;
-      margin-bottom: 1rem;
     }
 
     .hero h1 {
@@ -148,10 +139,7 @@
       font-weight: 800;
       line-height: 1.2;
       margin: 0.5rem 0;
-    }
-
-    .hero h1 span {
-      background: linear-gradient(135deg, #aaffff, #0cf);
+      background: linear-gradient(135deg, #ffffff, #4c9aff, #aaffff);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -166,12 +154,13 @@
 
     .hero-stats {
       display: flex;
-      gap: 1.8rem;
+      gap: 2.8rem;
       margin-top: 1.5rem;
     }
 
     .stat {
       font-weight: 600;
+      text-align: center;
     }
 
     .stat-number {
@@ -180,22 +169,33 @@
       color: #0cf;
     }
 
-    /* VR-шлем аватар */
+    /* аватар с волшебником — идеально круглая окружность */
     .avatar-vr {
-      flex: 0 0 280px;
+      width: 280px;
+      height: 280px;
       background: radial-gradient(circle at 30% 20%, rgba(0, 180, 255, 0.2), transparent);
       border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 1rem;
+      flex-shrink: 0;
     }
 
-    .avatar-vr i {
-      font-size: 12rem;
+    .wizard-emoji {
+      font-size: 9rem;
+      display: inline-block;
       filter: drop-shadow(0 0 15px #0cf);
-      color: #eef5ff;
+      line-height: 1;
     }
 
-    /* навыки */
+    .avatar-vr .sub {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      letter-spacing: 1px;
+    }
+
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
@@ -219,7 +219,6 @@
       transform: scale(1.02);
     }
 
-    /* проекты карточки */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -269,7 +268,27 @@
       color: #9bc5ff;
     }
 
-    /* контакты соцсети */
+    .olympiads-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .olympiad-card {
+      background: rgba(15, 20, 45, 0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 1.5rem;
+      padding: 1.2rem 1.8rem;
+      border: 1px solid rgba(0, 200, 255, 0.3);
+      flex: 1;
+      min-width: 250px;
+      transition: 0.2s;
+    }
+    .olympiad-card i {
+      color: #0cf;
+      margin-right: 0.6rem;
+    }
+
     .social-links {
       display: flex;
       gap: 1.8rem;
@@ -298,7 +317,6 @@
       border-color: #0cf;
     }
 
-    /* футер */
     footer {
       margin-top: 5rem;
       text-align: center;
@@ -308,7 +326,6 @@
       color: #aab8ff;
     }
 
-    /* Адаптивность */
     @media (max-width: 850px) {
       .hero {
         flex-direction: column;
@@ -327,15 +344,15 @@
       .section-title {
         font-size: 2rem;
       }
-      .content {
-        padding: 1rem 1rem 2rem;
+      .avatar-vr {
+        width: 220px;
+        height: 220px;
       }
-      .avatar-vr i {
-        font-size: 8rem;
+      .wizard-emoji {
+        font-size: 6rem;
       }
     }
 
-    /* анимация появления при скролле */
     .fade-up {
       opacity: 0;
       transform: translateY(30px);
@@ -347,7 +364,6 @@
       transform: translateY(0);
     }
 
-    /* курсор и детали */
     ::selection {
       background: #0cf;
       color: #0a0f1a;
@@ -356,267 +372,212 @@
     a {
       text-decoration: none;
     }
-
-    .glow-button {
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
 
-  <div id="bg-canvas"></div>
+<div id="bg-canvas"></div>
 
-  <div class="content">
-    <!-- Hero секция -->
-    <div class="hero fade-up">
-      <div class="hero-info">
-        <div class="badge">
-          <i class="fas fa-vr-cardboard"></i> VR Innovator
-        </div>
-        <h1>Дмитрий <span>Захаров</span></h1>
-        <p>Создаю погружающие миры через код и воображение. <br> Разработчик VR-приложений, ученик <strong>Лицея информационных технологий</strong>.</p>
-        <div class="hero-stats">
-          <div class="stat"><span class="stat-number">4+</span><br>VR проектов</div>
-          <div class="stat"><span class="stat-number">2</span><br>года в геймдеве</div>
-          <div class="stat"><span class="stat-number">VR</span><br>эксперт</div>
-        </div>
-        <div style="margin-top: 2rem;">
-          <a href="#projects" class="btn btn-primary"><i class="fas fa-vr-cardboard"></i> Мои проекты</a>
-          <a href="#contact" class="btn" style="margin-left: 1rem;"><i class="fas fa-paper-plane"></i> Контакты</a>
-        </div>
+<div class="content">
+  <!-- Hero секция -->
+  <div class="hero fade-up">
+    <div class="hero-info">
+      <div class="badge-group">
+        <div class="badge"><i class="fas fa-vr-cardboard"></i> VR developer</div>
+        <div class="badge"><i class="fas fa-cube"></i> 3D artist</div>
       </div>
-      <div class="avatar-vr">
-        <i class="fas fa-glasses"></i>
-        <!-- стилизованный шлем / очки VR -->
-        <div style="font-size: 0.8rem; margin-top: 0.5rem;">⚡ VR Developer ⚡</div>
+      <h1>Дмитрий Захаров</h1>
+      <p>Создаю виртуальные миры через код и воображение.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-number">3+</span><br>проекта</div>
+        <div class="stat"><span class="stat-number">2025</span><br>старт</div>
+        <div class="stat"><span class="stat-number">Junior</span><br>уровень</div>
+      </div>
+      <div style="margin-top: 2rem;">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-vr-cardboard"></i> Мои проекты</a>
+        <a href="#contact" class="btn" style="margin-left: 1rem;"><i class="fas fa-paper-plane"></i> Контакты</a>
       </div>
     </div>
-
-    <!-- О себе + Лицей -->
-    <section id="about" class="fade-up">
-      <div class="glass-card" style="padding: 2rem;">
-        <h2 class="section-title" style="margin-bottom: 1rem;">О себе</h2>
-        <p style="font-size: 1.1rem; max-width: 85%;">Привет! Мне 15 лет, я учусь в <strong>Лицее информационных технологий</strong> (9 класс). Моя страсть — виртуальная реальность и создание приложений, которые меняют восприятие пространства. За два года я освоил Unity, начал работать с Unreal Engine и моделированием. Постоянно участвую в хакатонах и VR-лабораториях лицея. Моя цель — сделать VR-технологии доступными, интерактивными и полезными для образования и развлечений.</p>
-        <div style="margin-top: 1.5rem;">
-          <i class="fas fa-school" style="color: #0cf;"></i> <strong>ЛИТ</strong> — направление: разработка виртуальной и дополненной реальности
-        </div>
-      </div>
-    </section>
-
-    <!-- Навыки -->
-    <section class="fade-up">
-      <h2 class="section-title"><i class="fas fa-code"></i> Инструменты & Технологии</h2>
-      <div class="skills-grid">
-        <span class="skill-tag"><i class="fab fa-unity"></i> Unity3D</span>
-        <span class="skill-tag"><i class="fas fa-cube"></i> Unreal Engine 5</span>
-        <span class="skill-tag"><i class="fas fa-language"></i> C# / C++</span>
-        <span class="skill-tag"><i class="fas fa-paintbrush"></i> Blender</span>
-        <span class="skill-tag"><i class="fas fa-vr-cardboard"></i> OpenXR / SteamVR</span>
-        <span class="skill-tag"><i class="fas fa-brain"></i> 3D-моделирование</span>
-        <span class="skill-tag"><i class="fas fa-database"></i> Photon / Netcode</span>
-        <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Адаптивный дизайн</span>
-      </div>
-    </section>
-
-    <!-- Проекты VR -->
-    <section id="projects" class="fade-up">
-      <h2 class="section-title"><i class="fas fa-rocket"></i> VR-проекты</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-icon"><i class="fas fa-landmark"></i></div>
-          <h3>VR Эрмитаж Экскурсия</h3>
-          <p>Интерактивное путешествие по залам Эрмитажа с возможностью взаимодействия с экспонатами. Реализована система телепортации и голосовые подсказки.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Unity</span>
-            <span class="tech-badge">XR Interaction Toolkit</span>
-            <span class="tech-badge">Blender</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-icon"><i class="fas fa-atom"></i></div>
-          <h3>Физическая лаборатория VR</h3>
-          <p>Обучающее приложение для изучения физики: опыты с гравитацией, магнитными полями и кинематикой в виртуальной среде. Поддержка очков Meta Quest.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Unreal Engine</span>
-            <span class="tech-badge">C++</span>
-            <span class="tech-badge">Niagara VFX</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-icon"><i class="fas fa-robot"></i></div>
-          <h3>CyberSpaces – мультиплеер</h3>
-          <p>Киберпанк арена для 2-4 игроков в VR: перестрелки лазерами, динамические препятствия. Работает через Photon Pun2.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Unity</span>
-            <span class="tech-badge">Photon</span>
-            <span class="tech-badge">Final IK</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Образование / Лицей -->
-    <section class="fade-up">
-      <div class="glass-card" style="padding: 1.8rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
-        <div>
-          <i class="fas fa-graduation-cap" style="font-size: 2rem; color: #0cf; margin-right: 1rem;"></i>
-          <span style="font-weight: 700; font-size: 1.3rem;">Лицей информационных технологий</span>
-          <p style="margin-top: 0.5rem;">специализация: VR/AR-разработка, участие в проектных сменах и IT-интенсивах</p>
-        </div>
-        <i class="fas fa-microchip" style="font-size: 3rem; opacity: 0.6;"></i>
-      </div>
-    </section>
-
-    <!-- Контакты -->
-    <section id="contact" class="fade-up">
-      <h2 class="section-title"><i class="fas fa-paper-plane"></i> Связь & соцсети</h2>
-      <div class="glass-card" style="padding: 2rem;">
-        <p style="margin-bottom: 1rem;">Открыт для коллабораций, интересных проектов и стажировок в сфере VR. Пиши!</p>
-        <div class="social-links">
-          <a href="#" class="social-icon" target="_blank"><i class="fab fa-telegram"></i></a>
-          <a href="#" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="#" class="social-icon" target="_blank"><i class="fab fa-discord"></i></a>
-          <a href="#" class="social-icon" target="_blank"><i class="fas fa-envelope"></i></a>
-          <a href="#" class="social-icon" target="_blank"><i class="fab fa-vr-cardboard"></i></a>
-        </div>
-        <div style="margin-top: 1.8rem;">
-          <i class="fas fa-map-marker-alt"></i> Санкт-Петербург / Online <br>
-          <i class="fas fa-laptop-code"></i> Email: artem.vr@litstudent.ru (демо)
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2026 Дмитрий Захаров — Будущее создаётся сегодня в виртуальной реальности</p>
-      <p><i class="fas fa-code"></i> Сайт-визитка для портфолио | Хостинг на GitHub Pages</p>
-    </footer>
+    <div class="avatar-vr">
+      <span class="wizard-emoji">🧙</span>
+      <div class="sub">Маг 6 уровня</div>
+    </div>
   </div>
 
-  <!-- Three.js библиотека + фон с частицами -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script>
-    // --- 3D фон с парящими частицами / звездная пыль (VR стиль)
-    (function initThreeBackground() {
-      const container = document.getElementById('bg-canvas');
-      const scene = new THREE.Scene();
-      scene.background = new THREE.Color(0x05050f);
-      
-      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      camera.position.z = 20;
-      
-      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setPixelRatio(window.devicePixelRatio);
-      container.appendChild(renderer.domElement);
-      
-      // Группа частиц
-      const particlesGeometry = new THREE.BufferGeometry();
-      const particlesCount = 1600;
-      const posArray = new Float32Array(particlesCount * 3);
-      
-      for(let i = 0; i < particlesCount * 3; i += 3) {
-        posArray[i] = (Math.random() - 0.5) * 100;
-        posArray[i+1] = (Math.random() - 0.5) * 60;
-        posArray[i+2] = (Math.random() - 0.5) * 50 - 20;
-      }
-      particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-      
-      const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.12,
-        color: 0x88aaff,
-        transparent: true,
-        opacity: 0.6,
-        blending: THREE.AdditiveBlending
-      });
-      
-      const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-      scene.add(particlesMesh);
-      
-      // Добавим центральный светящийся тор (нюанс VR)
-      const torusGeo = new THREE.TorusGeometry(3.2, 0.12, 64, 300);
-      const torusMat = new THREE.MeshStandardMaterial({ color: 0x00ccff, emissive: 0x004466, emissiveIntensity: 0.5 });
-      const torus = new THREE.Mesh(torusGeo, torusMat);
-      scene.add(torus);
-      
-      // еще несколько линий / колец
-      const ringGeo = new THREE.TorusGeometry(4.5, 0.07, 64, 300);
-      const ringMat = new THREE.MeshStandardMaterial({ color: 0x33aaff, emissive: 0x2266aa, emissiveIntensity: 0.3 });
-      const ring = new THREE.Mesh(ringGeo, ringMat);
-      scene.add(ring);
-      
-      // точечный свет
-      const ambientLight = new THREE.AmbientLight(0x111122);
-      scene.add(ambientLight);
-      const pointLight = new THREE.PointLight(0x2266ff, 0.8, 40);
-      pointLight.position.set(2, 3, 8);
-      scene.add(pointLight);
-      
-      const backLight = new THREE.PointLight(0xff44aa, 0.4);
-      backLight.position.set(-3, -1, -5);
-      scene.add(backLight);
-      
-      // анимация с вращением частиц и колец
-      let time = 0;
-      function animateParticles() {
-        requestAnimationFrame(animateParticles);
-        time += 0.003;
-        
-        particlesMesh.rotation.y = time * 0.1;
-        particlesMesh.rotation.x = Math.sin(time * 0.2) * 0.1;
-        
-        torus.rotation.x = time * 0.2;
-        torus.rotation.z = time * 0.15;
-        ring.rotation.x = time * 0.18;
-        ring.rotation.z = time * 0.12;
-        
-        // легкое движение камеры
-        camera.position.x = Math.sin(time * 0.1) * 0.5;
-        camera.position.y = Math.cos(time * 0.13) * 0.3;
-        camera.lookAt(0, 0, 0);
-        
-        renderer.render(scene, camera);
-      }
-      
-      animateParticles();
-      
-      window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-      });
-    })();
-  </script>
+  <!-- О себе -->
+  <section id="about" class="fade-up">
+    <div class="glass-card" style="padding: 2rem;">
+      <h2 class="section-title" style="margin-bottom: 1rem;">О себе</h2>
+      <p style="font-size: 1.1rem; max-width: 95%;">Привет! Меня зовут Дмитрий, я — начинающий VR-разработчик и 3D-художник. Я учусь в Лицее информационных технологий в Санкт-Петербурге. С 2025 года я активно осваиваю инструменты Varwin и Blender, а также начал изучать язык Python. Регулярно участвую в хакатонах и IT-олимпиадах. В будущем хочу попробовать себя в разных сферах, но пока основным направлением для меня является разработка приложений виртуальной и дополненной реальности. Это направление привлекает меня тем, что позволяет мне легко осваивать основы программирования и моделирования, а также быстро видеть результат своей работы. Интересуюсь кибербезопасностью. Владею навыками видеомонтажа. Открыт для интересных проектов и стажировок в сфере IT.</p>
+    </div>
+  </section>
 
-  <!-- Анимация появления при скролле (Intersection Observer) -->
-  <script>
-    const fadeElements = document.querySelectorAll('.fade-up');
+  <!-- Инструменты & Технологии -->
+  <section class="fade-up">
+    <h2 class="section-title"><i class="fas fa-wrench"></i> Инструменты & Технологии</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">Varwin</span>
+      <span class="skill-tag">Blender</span>
+      <span class="skill-tag">Python</span>
+    </div>
+  </section>
+
+  <!-- VR-проекты -->
+  <section id="projects" class="fade-up">
+    <h2 class="section-title"><i class="fas fa-rocket"></i> VR-проекты</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-hard-hat"></i></div>
+        <h3>FeVR/ARt 2025: VR-тренажер для МЧС</h3>
+        <p>Тренажер для отработки безопасной эвакуации пострадавшего из горящего здания.</p>
+        <div class="project-tech">
+          <span class="tech-badge">Varwin</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-leaf"></i></div>
+        <h3>Varwin хакатон 2026: Обучающий VR-проект</h3>
+        <p>Проект в игровой форме знакомит с инвазивными растениями и рассказывает об их опасности.</p>
+        <div class="project-tech">
+          <span class="tech-badge">Varwin</span>
+          <span class="tech-badge">Blender</span>
+          <span class="tech-badge">Python</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+        <h3>Международный конкурс Varwin 2026: 3D-игра</h3>
+        <p>Игра в жанре ужасов (эскейп-рум).</p>
+        <div class="project-tech">
+          <span class="tech-badge">Varwin</span>
+          <span class="tech-badge">Blender</span>
+          <span class="tech-badge">Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Олимпиады -->
+  <section class="fade-up">
+    <h2 class="section-title"><i class="fas fa-trophy"></i> Олимпиады</h2>
+    <div class="olympiads-grid">
+      <div class="olympiad-card">
+        <i class="fas fa-medal"></i> Призёр национальной технологической олимпиады Junior 2025 по направлению «Технологии и виртуальная реальность»
+      </div>
+      <div class="olympiad-card">
+        <i class="fas fa-award"></i> III место на открытой районной дистанционной олимпиаде «ОСА» 2026 по направлению «Системное администрирование»
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="fade-up">
+    <h2 class="section-title"><i class="fas fa-paper-plane"></i> Связь & соцсети</h2>
+    <div class="glass-card" style="padding: 2rem;">
+      <p style="margin-bottom: 1rem;">Открыт для интересных проектов и стажировок в сфере IT. Пишите!</p>
+      <div class="social-links">
+        <a href="https://t.me/spbDimaIT2" class="social-icon" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="mailto:Dima-123098123098@yandex.ru" class="social-icon" target="_blank"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div style="margin-top: 1.8rem;">
+        <i class="fas fa-map-marker-alt"></i> Санкт-Петербург / Online
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Дмитрий Захаров | визитка-портфолио</p>
+  </footer>
+</div>
+
+<!-- Three.js фон (без колец) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+  (function initThreeBackground() {
+    const container = document.getElementById('bg-canvas');
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x05050f);
     
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: "0px 0px -20px 0px" });
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 20;
     
-    fadeElements.forEach(el => observer.observe(el));
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    container.appendChild(renderer.domElement);
     
-    // добавим плавный скролл к якорям
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        if(targetId === "#" || targetId === "") return;
-        const targetElement = document.querySelector(targetId);
-        if(targetElement) {
-          e.preventDefault();
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
+    const particlesGeometry = new THREE.BufferGeometry();
+    const particlesCount = 1600;
+    const posArray = new Float32Array(particlesCount * 3);
+    for(let i = 0; i < particlesCount * 3; i += 3) {
+      posArray[i] = (Math.random() - 0.5) * 100;
+      posArray[i+1] = (Math.random() - 0.5) * 60;
+      posArray[i+2] = (Math.random() - 0.5) * 50 - 20;
+    }
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+    const particlesMaterial = new THREE.PointsMaterial({
+      size: 0.12,
+      color: 0x88aaff,
+      transparent: true,
+      opacity: 0.6,
+      blending: THREE.AdditiveBlending
     });
+    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+    scene.add(particlesMesh);
     
-    // маленькое консольное приветствие
-    console.log("VR-портфолио Дмитрия — Лицей информационных технологий ✨");
-  </script>
+    const ambientLight = new THREE.AmbientLight(0x111122);
+    scene.add(ambientLight);
+    const pointLight = new THREE.PointLight(0x2266ff, 0.8, 40);
+    pointLight.position.set(2, 3, 8);
+    scene.add(pointLight);
+    const backLight = new THREE.PointLight(0xff44aa, 0.4);
+    backLight.position.set(-3, -1, -5);
+    scene.add(backLight);
+    
+    let time = 0;
+    function animateParticles() {
+      requestAnimationFrame(animateParticles);
+      time += 0.003;
+      particlesMesh.rotation.y = time * 0.1;
+      particlesMesh.rotation.x = Math.sin(time * 0.2) * 0.1;
+      camera.position.x = Math.sin(time * 0.1) * 0.5;
+      camera.position.y = Math.cos(time * 0.13) * 0.3;
+      camera.lookAt(0, 0, 0);
+      renderer.render(scene, camera);
+    }
+    animateParticles();
+    
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  })();
+</script>
+
+<script>
+  const fadeElements = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -20px 0px" });
+  fadeElements.forEach(el => observer.observe(el));
+  
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if(targetId === "#" || targetId === "") return;
+      const targetElement = document.querySelector(targetId);
+      if(targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
 </body>
 </html>
